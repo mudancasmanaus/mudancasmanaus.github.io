@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudanças e Fretes em Manaus | Orçamento Rápido | Mudanças Manaus</title>
+    <meta name="description" content="Empresa especializada em mudanças residenciais e comerciais em Manaus. Fretes rápidos e seguros. Orçamento gratuito! Atendemos toda Manaus e região.">
+    <style>
+        /* Reset e estilos gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #1a5276;
+            --secondary: #e67e22;
+            --accent: #2ecc71;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+            --text: #333333;
+        }
+        
+        body {
+            color: var(--text);
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background: #d35400;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background: #154360;
+        }
+        
+        .btn-whatsapp {
+            background: #25D366;
+        }
+        
+        .btn-whatsapp:hover {
+            background: #128C7E;
+        }
+        
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            background-color: #ddd;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .logo-text span {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--secondary);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 82, 118, 0.8), rgba(26, 82, 118, 0.9)), url('https://images.unsplash.com/photo-1551524165-9084980f6bc0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 150px 0 100px;
+            margin-top: 70px;
+        }
+        
+        .hero h1 {
+            color: white;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        /* Serviços */
+        .services {
+            background: white;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: var(--light);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .service-content h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* Equipamentos */
+        .equipment {
+            background: var(--light);
+        }
+        
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .equipment-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .equipment-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .equipment-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .equipment-content {
+            padding: 25px;
+        }
+        
+        .equipment-content h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* Por que nos escolher */
+        .why-us {
+            background: white;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--light);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .feature i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        .feature h3 {
+            margin-bottom: 15px;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .cta h2 {
+            color: white;
+        }
+        
+        .cta h2:after {
+            background: var(--secondary);
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+        
+        /* Depoimentos */
+        .testimonials {
+            background: var(--light);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .testimonial:before {
+            content: """;
+            font-size: 5rem;
+            color: var(--secondary);
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            line-height: 1;
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .client {
+            display: flex;
+            align-items: center;
+        }
+        
+        .client-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .client-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .client-info p {
+            margin: 0;
+            font-style: normal;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Contato */
+        .contact {
+            background: white;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .contact-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item i {
+            margin-right: 15px;
+            color: var(--secondary);
+            font-size: 1.2rem;
+            width: 20px;
+        }
+        
+        .map {
+            height: 300px;
+            background: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: var(--secondary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+        
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            z-index: 1000;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background: #128C7E;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero {
+                padding: 120px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/5592982613361?text=Olá! Gostaria de solicitar um orçamento para mudança." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <!-- Substitua por sua logo -->
+                    <img src="logo.jpg" alt="Mudanças Manaus" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div class="logo-text">Mudanças<span>Manaus</span></div>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#equipamentos">Equipamentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Procurando uma Empresa de Qualidade e Confiança para Realizar sua Mudança?</h1>
+            <p>Mudanças Manaus é o que você precisa. Há mais de 10 anos realizando mudanças residenciais e comerciais em toda Manaus. Conte com nossa equipe especializada para um serviço de qualidade.</p>
+            <div class="hero-btns">
+                <a href="https://wa.me/5592982613361?text=Olá! Gostaria de solicitar um orçamento para mudança." class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Orçamento via WhatsApp
+                </a>
+                <a href="#servicos" class="btn btn-primary">Conheça Nossos Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Mudança Residencial</h3>
+                        <p>Realizamos sua mudança residencial com todo cuidado e segurança. Equipe treinada para desmontar e montar móveis, embalar objetos frágeis e transportar com a máxima proteção.</p>
+                        <a href="https://wa.me/5592982613361?text=Olá! Gostaria de solicitar um orçamento para mudança residencial." class="btn" target="_blank">Solicitar Orçamento</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Mudança Comercial</h3>
+                        <p>Mudança para empresas e comércios com agilidade e mínimo de interrupção nas atividades. Trabalhamos fora do horário comercial se necessário.</p>
+                        <a href="https://wa.me/5592982613361?text=Olá! Gostaria de solicitar um orçamento para mudança comercial." class="btn" target="_blank">Solicitar Orçamento</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Fretes e Entregas</h3>
+                        <p>Serviço de fretes e entregas rápidas em Manaus e região metropolitana. Transportamos móveis, eletrodomésticos, materiais de construção e mais.</p>
+                        <a href="https://wa.me/5592982613361?text=Olá! Gostaria de solicitar um orçamento para frete." class="btn" target="_blank">Solicitar Orçamento</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipamentos -->
+    <section class="equipment" id="equipamentos">
+        <div class="container">
+            <h2>FRETES E MUDANÇAS<br>Temos Equipamentos e Equipe Completa!</h2>
+            <div class="equipment-grid">
+                <div class="equipment-card">
+                    <div class="equipment-img" style="background-image: url('https://images.unsplash.com/photo-1621330396173-e109683bbd37?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="equipment-content">
+                        <h3>Caminhões Baú</h3>
+                        <p>Veículos de transporte novos e revisados para que não haja nenhum transtorno na hora da sua mudança.</p>
+                    </div>
+                </div>
+                
+                <div class="equipment-card">
+                    <div class="equipment-img" style="background-image: url('https://images.unsplash.com/photo-1596569116589-1ce0d999d7a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="equipment-content">
+                        <h3>Picapes</h3>
+                        <p>Ideal para pequenas mudanças em menores distâncias, mais economia pra você com a mesma qualidade e segurança de sempre.</p>
+                    </div>
+                </div>
+                
+                <div class="equipment-card">
+                    <div class="equipment-img" style="background-image: url('https://images.unsplash.com/photo-1586528116314-48d42cdb71e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="equipment-content">
+                        <h3>Carregadores de Móveis</h3>
+                        <p>Equipe de carregadores altamente treinados para fazer sua mudança com total conforto e segurança.</p>
+                    </div>
+                </div>
+                
+                <div class="equipment-card">
+                    <div class="equipment-img" style="background-image: url('https://images.unsplash.com/photo-1581094794329-cdc53f5c51a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="equipment-content">
+                        <h3>Montadores de Móveis</h3>
+                        <p>Profissionais experientes e qualificados para garantir que seus móveis não sejam danificados na hora da montagem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por que nos escolher -->
+    <section class="why-us">
+        <div class="container">
+            <h2>Por que Escolher a Mudanças Manaus?</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Segurança e Confiança</h3>
+                    <p>Nossos colaboradores são treinados e supervisionados. Todos os itens são transportados com máxima segurança.</p>
+                </div>
+                
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <h3>Pontualidade</h3>
+                    <p>Valorizamos seu tempo. Chegamos no horário combinado e cumprimos os prazos estabelecidos.</p>
+                </div>
+                
+                <div class="feature">
+                    <i class="fas fa-tools"></i>
+                    <h3>Equipamentos Adequados</h3>
+                    <p>Utilizamos equipamentos e veículos apropriados para cada tipo de mudança e frete.</p>
+                </div>
+                
+                <div class="feature">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Preço Justo</h3>
+                    <p>Orçamento sem custo e transparente. Sem taxas ou valores surpresa no final do serviço.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Precisa de um serviço de mudança ou frete?</h2>
+            <p>Entre em contato agora mesmo e solicite um orçamento gratuito. Atendemos toda Manaus e região metropolitana.</p>
+            <a href="https://wa.me/5592982613361?text=Olá! Gostaria de solicitar um orçamento." class="btn btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>O que nossos clientes dizem</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>"Contratei a Mudanças Manaus para minha mudança de apartamento e fiquei muito satisfeita. Foram cuidadosos com meus móveis e objetos frágeis. Recomendo!"</p>
+                    <div class="client">
+                        <div class="client-img">M</div>
+                        <div class="client-info">
+                            <h4>Mariana Silva</h4>
+                            <p>Mudança Residencial</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <p>"Precisava transportar móveis para meu novo escritório e o serviço de frete foi rápido e eficiente. Preço justo e equipe prestativa."</p>
+                    <div class="client">
+                        <div class="client-img">R</div>
+                        <div class="client-info">
+                            <h4>Ricardo Oliveira</h4>
+                            <p>Serviço de Frete</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <p>"Já utilizei os serviços da Mudanças Manaus três vezes e sempre fico impressionado com a profissionalismo. Chegam no horário e fazem tudo com cuidado."</p>
+                    <div class="client">
+                        <div class="client-img">C</div>
+                        <div class="client-info">
+                            <h4>Carlos Andrade</h4>
+                            <p>Mudança Comercial</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Fale Conosco</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <p><strong>Telefone/WhatsApp</strong></p>
+                            <p>(92) 98261-3361</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p><strong>Endereço</strong></p>
+                            <p>Rua Beira Rio, Nº 63 - Coroado</p>
+                            <p>CEP 69.082-051 - Manaus/AM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <p><strong>Horário de Atendimento</strong></p>
+                            <p>Segunda a Sábado: 7h às 19h</p>
+                            <p>Domingo: 7h às 12h (apenas com agendamento)</p>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/5592982613361?text=Olá! Gostaria de solicitar um orçamento." class="btn btn-whatsapp" target="_blank" style="margin-top: 20px;">
+                        <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+                    </a>
+                </div>
+                
+                <div class="map">
+                    <!-- Aqui você pode adicionar um mapa do Google Maps -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.045302451702!2d-59.98739072477742!3d-3.0679799402914075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1b6d1551e1b5%3A0x1b1a8c8b8b8b8b8b!2sRua%20Beira%20Rio%2C%2063%20-%20Coroado%2C%20Manaus%20-%20AM%2C%2069082-051!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Mudanças Manaus</h3>
+                    <p>Há mais de 10 anos realizando mudanças e fretes em Manaus com segurança, agilidade e preço justo.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Serviços</h3>
+                    <ul>
+                        <li><a href="#servicos">Mudança Residencial</a></li>
+                        <li><a href="#servicos">Mudança Comercial</a></li>
+                        <li><a href="#servicos">Fretes e Entregas</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#equipamentos">Equipamentos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> (92) 98261-3361</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Rua Beira Rio, 63 - Coroado</li>
+                        <li><i class="fas fa-city"></i> Manaus - AM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Mudanças Manaus. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '70px';
+                nav.style.left = '0';
+                nav.style.width = '100%';
+                nav.style.background = 'white';
+                nav.style.padding = '20px';
+                nav.style.boxShadow = '0 5px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
