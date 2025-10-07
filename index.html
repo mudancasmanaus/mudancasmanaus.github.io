@@ -1,23 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head><!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17630468534"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17630468534');
-</script><!-- Event snippet for Compra conversion page -->
-<script>
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17630468534/mzsHCJH_v6gbELaz7tZB',
-      'value': 1.0,
-      'currency': 'BRL',
-      'transaction_id': ''
-  });
-</script>
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mudanças e Fretes em Manaus | Orçamento Rápido | Mudanças Manaus</title>
@@ -157,6 +140,13 @@
             border-radius: 5px;
             font-weight: bold;
             color: var(--primary);
+            overflow: hidden;
+        }
+        
+        .logo-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .logo-text {
@@ -197,7 +187,7 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(26, 82, 118, 0.8), rgba(26, 82, 118, 0.9)), url('https://images.unsplash.com/photo-1551524165-9084980f6bc0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(26, 82, 118, 0.8), rgba(26, 82, 118, 0.9)), url('foto1.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -425,6 +415,10 @@
             gap: 50px;
         }
         
+        .contact-info {
+            text-align: center;
+        }
+        
         .contact-info h3 {
             margin-bottom: 20px;
             color: var(--primary);
@@ -433,6 +427,7 @@
         .contact-item {
             display: flex;
             margin-bottom: 20px;
+            justify-content: center;
         }
         
         .contact-item i {
@@ -440,13 +435,6 @@
             color: var(--secondary);
             font-size: 1.2rem;
             width: 20px;
-        }
-        
-        .map {
-            height: 300px;
-            background: #eee;
-            border-radius: 8px;
-            overflow: hidden;
         }
         
         /* Footer */
@@ -582,8 +570,8 @@
         <div class="container header-container">
             <div class="logo">
                 <div class="logo-img">
-                    <!-- Substitua por sua logo -->
-                    <img src="logo.jpg" alt="Mudanças Manaus" style="width:100%; height:100%; object-fit:cover;">
+                    <!-- SUA LOGO AQUI - substitua logo.jpg pela sua logo -->
+                    <img src="logo.jpg" alt="Mudanças Manaus">
                 </div>
                 <div class="logo-text">Mudanças<span>Manaus</span></div>
             </div>
@@ -605,7 +593,7 @@
     <section class="hero" id="home">
         <div class="container">
             <h1>Procurando uma Empresa de Qualidade e Confiança para Realizar sua Mudança?</h1>
-            <p>Mudanças Manaus é o que você precisa. Há mais de 10 anos realizando mudanças residenciais e comerciais em toda Manaus. Conte com nossa equipe especializada para um serviço de qualidade.</p>
+            <p>Mudanças Manaus é o que você precisa. Há mais de 20 anos realizando mudanças residenciais e comerciais em toda Manaus. Conte com nossa equipe especializada para um serviço de qualidade.</p>
             <div class="hero-btns">
                 <a href="https://wa.me/5592982613361?text=Olá! Gostaria de solicitar um orçamento para mudança." class="btn btn-whatsapp" target="_blank">
                     <i class="fab fa-whatsapp"></i> Orçamento via WhatsApp
@@ -662,7 +650,8 @@
             <h2>FRETES E MUDANÇAS<br>Temos Equipamentos e Equipe Completa!</h2>
             <div class="equipment-grid">
                 <div class="equipment-card">
-                    <div class="equipment-img" style="background-image: url('https://images.unsplash.com/photo-1621330396173-e109683bbd37?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <!-- FOTO 2 - Caminhão Baú -->
+                    <div class="equipment-img" style="background-image: url('foto2.jpg')"></div>
                     <div class="equipment-content">
                         <h3>Caminhões Baú</h3>
                         <p>Veículos de transporte novos e revisados para que não haja nenhum transtorno na hora da sua mudança.</p>
@@ -670,7 +659,8 @@
                 </div>
                 
                 <div class="equipment-card">
-                    <div class="equipment-img" style="background-image: url('https://images.unsplash.com/photo-1596569116589-1ce0d999d7a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <!-- FOTO 3 - Picapes -->
+                    <div class="equipment-img" style="background-image: url('foto3.jpg')"></div>
                     <div class="equipment-content">
                         <h3>Picapes</h3>
                         <p>Ideal para pequenas mudanças em menores distâncias, mais economia pra você com a mesma qualidade e segurança de sempre.</p>
@@ -678,7 +668,8 @@
                 </div>
                 
                 <div class="equipment-card">
-                    <div class="equipment-img" style="background-image: url('https://images.unsplash.com/photo-1586528116314-48d42cdb71e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <!-- FOTO 4 - Carregadores -->
+                    <div class="equipment-img" style="background-image: url('foto4.jpg')"></div>
                     <div class="equipment-content">
                         <h3>Carregadores de Móveis</h3>
                         <p>Equipe de carregadores altamente treinados para fazer sua mudança com total conforto e segurança.</p>
@@ -686,7 +677,8 @@
                 </div>
                 
                 <div class="equipment-card">
-                    <div class="equipment-img" style="background-image: url('https://images.unsplash.com/photo-1581094794329-cdc53f5c51a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <!-- FOTO 5 - Montadores -->
+                    <div class="equipment-img" style="background-image: url('foto5.jpg')"></div>
                     <div class="equipment-content">
                         <h3>Montadores de Móveis</h3>
                         <p>Profissionais experientes e qualificados para garantir que seus móveis não sejam danificados na hora da montagem.</p>
@@ -804,23 +796,9 @@
                         </div>
                     </div>
                     
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <p><strong>Horário de Atendimento</strong></p>
-                            <p>Segunda a Sábado: 7h às 19h</p>
-                            <p>Domingo: 7h às 12h (apenas com agendamento)</p>
-                        </div>
-                    </div>
-                    
                     <a href="https://wa.me/5592982613361?text=Olá! Gostaria de solicitar um orçamento." class="btn btn-whatsapp" target="_blank" style="margin-top: 20px;">
                         <i class="fab fa-whatsapp"></i> Solicitar Orçamento
                     </a>
-                </div>
-                
-                <div class="map">
-                    <!-- Aqui você pode adicionar um mapa do Google Maps -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.045302451702!2d-59.98739072477742!3d-3.0679799402914075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x926c1b6d1551e1b5%3A0x1b1a8c8b8b8b8b8b!2sRua%20Beira%20Rio%2C%2063%20-%20Coroado%2C%20Manaus%20-%20AM%2C%2069082-051!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
@@ -832,7 +810,7 @@
             <div class="footer-container">
                 <div class="footer-col">
                     <h3>Mudanças Manaus</h3>
-                    <p>Há mais de 10 anos realizando mudanças e fretes em Manaus com segurança, agilidade e preço justo.</p>
+                    <p>Há mais de 20 anos realizando mudanças e fretes em Manaus com segurança, agilidade e preço justo.</p>
                 </div>
                 
                 <div class="footer-col">
